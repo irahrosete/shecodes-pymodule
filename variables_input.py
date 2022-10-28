@@ -1,4 +1,5 @@
 """Python module variable and user input exercises"""
+# pylint: disable=invalid-name
 
 # Q1. Write a program that takes two numbers
 # from the user, and outputs their sum.

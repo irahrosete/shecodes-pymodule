@@ -1,4 +1,5 @@
 """Python module conditionals exercises"""
+# pylint: disable=invalid-name
 
 # Q1. Kate’s cat, Roary, loves catching moths. Write a program that
 # determines whether or not it is time for Roary to catch moths.
