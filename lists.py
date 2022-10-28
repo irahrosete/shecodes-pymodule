@@ -42,8 +42,30 @@
 #     print(item[0] + ": " + item[1])
 
 #Q3. Ask the user for three names, add them to a list, then print the list.
-names = []
+# names = []
 
-for name in range(3):
-    names.append(input("Enter a name: "))
-print(names)
+# for name in range(3):
+#     names.append(input("Enter a name: "))
+# print(names)
+
+#Q4. Using the following starter code:
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [7, 8, 9]
+d = []
+e = []
+# Produce the following lists:
+# [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# [1, 2, 3, 4, 5, 6, 7, 8, 9]
+newlist = [a, b, c]
+print(newlist)
+
+def flatmap(new_list, sublist):
+    """flatmap"""
+    for item in sublist:
+        for subitem in item:
+            new_list.append(subitem)
+
+alpha = []
+flatmap(alpha, newlist)
+print(alpha)
