@@ -1,4 +1,5 @@
 """Python module for loops exercises"""
+# pylint: disable=invalid-name
 
 # Q1. Ask the user for a number. Use a for loop to print the times tables for that number.
 num = int(input("Enter a number: "))
@@ -23,7 +24,7 @@ for item in num_list:
 
 print(total)
 
-#Q3. Given a list, use a for loop to sum all the numbers in the list.
+# Q3. Given a list, use a for loop to sum all the numbers in the list.
 random_numbers = [3, 5, 9, 1]
 # random_numbers = [-3, -5, 9, 1]
 # random_numbers = []
@@ -34,7 +35,7 @@ for item in random_numbers:
 
 print(total)
 
-#Q4. Use a for loop to format and print the following list
+# Q4. Use a for loop to format and print the following list
 mailing_list = [
 ["Chilli", "chilli@thechihuahua.com"],
 ["Roary", "roary@moth.catchers"],
