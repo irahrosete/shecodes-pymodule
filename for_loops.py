@@ -1,4 +1,5 @@
 """Python module for loops exercises"""
+# pylint: disable=invalid-name
 
 # Q1. Ask the user for a number. Use a for loop to print the times tables for that number.
 num = int(input("Enter a number: "))
