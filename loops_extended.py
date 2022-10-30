@@ -40,6 +40,13 @@
 
 # Q2. Ask the user to enter a string. Output the string one character
 # at a time, as well as it’s position in the string.
-string = input("Please enter a string: ")
-for i, letter in enumerate(string):
-    print(f"{i:<3}{letter}")
+# string = input("Please enter a string: ")
+# for i, letter in enumerate(string):
+#     print(f"{i:<3}{letter}")
+
+# Q3. Ask the user for a number and use this to generate a pyramid of that height.
+size = int(input("Pyramid size: "))
+
+for i in range(size + 1):
+    if i != 0:
+        print(i * "*")
