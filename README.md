@@ -10,7 +10,7 @@
 1. [while loops](/while_loops.py)
 1. [loops extended](/loops_extended.py)
 1. reading csv files
-1. functions
+1. [functions](/functions.py)
 1. dictionaries
 1. OOP
 1. databases
