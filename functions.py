@@ -22,13 +22,22 @@
 # print(odd_or_even(8))
 
 # Q3. Write a function that returns the mean of a list of numbers.
-def mean_number(num_list):
-    """Returns the mean"""
-    total = 0
-    for item in num_list:
-        total += item
+# def mean_number(num_list):
+#     """Returns the mean"""
+#     total = 0
+#     for item in num_list:
+#         total += item
 
-    mean = total / (len(num_list))
-    return mean
+#     mean = total / (len(num_list))
+#     return mean
 
-print(mean_number([1, 2, 3, 4, 5]))
+# print(mean_number([1, 2, 3, 4, 5]))
+
+# Q4. Write a function that takes two parameters; the unit price of an item,
+# and how many units were purchased. Return the total cost as a string.
+def cost(price, unit):
+    """Returns total of price and unit"""
+    total = price * unit
+    return f"${total}"
+
+print(cost(4.25, 3))
