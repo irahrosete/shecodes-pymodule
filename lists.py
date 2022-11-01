@@ -59,6 +59,16 @@ e = []
 newlist = [a, b, c]
 print(newlist)
 
+new_newlist = []
+new_newlist.extend(a)
+new_newlist.extend(b)
+new_newlist.extend(c)
+print(new_newlist)
+
+# alternatives:
+print(a + b + c)
+print([*a, *b, *c])
+
 # def flatmap(new_list, sublist):
 #     """flatmap"""
 #     for item in sublist:
@@ -68,9 +78,3 @@ print(newlist)
 # alpha = []
 # flatmap(alpha, newlist)
 # print(alpha)
-
-new_newlist = []
-new_newlist.extend(a)
-new_newlist.extend(b)
-new_newlist.extend(c)
-print(new_newlist)
