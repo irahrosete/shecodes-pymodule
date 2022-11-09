@@ -1,7 +1,7 @@
 """Python module lists exercises"""
 # pylint: disable=invalid-name
 
-#Q1. Given the list of foods below, output:
+# Q1. Given the list of foods below, output:
   # 1. The first item in the list.
   # 2. The third item in the list.
   # 3. The last item in the list.
@@ -28,7 +28,7 @@ print(foods[0:3])
 print(foods[-3:])
 print(foods[6][-1])
 
-#Q2. Format and print the following list:
+# Q2. Format and print the following list:
 mailing_list = [
     ["Chilli", "chilli@thechihuahua.com"],
     ["Roary", "roary@moth.catchers"],
@@ -40,14 +40,14 @@ mailing_list = [
 for item in mailing_list:
     print(item[0] + ": " + item[1])
 
-#Q3. Ask the user for three names, add them to a list, then print the list.
+# Q3. Ask the user for three names, add them to a list, then print the list.
 names = []
 
 for name in range(3):
     names.append(input("Enter a name: "))
 print(names)
 
-#Q4. Using the following starter code:
+# Q4. Using the following starter code:
 a = [1, 2, 3]
 b = [4, 5, 6]
 c = [7, 8, 9]
