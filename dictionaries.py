@@ -14,15 +14,28 @@ groceries = {
   "Oranges": 3.08
 }
 
+# quantity = {
+#   "Baby Spinach": 1,
+#   "Hot Chocolate": 3,
+#   "Crackers": 2,
+#   "Bacon": 1,
+#   "Carrots": 4,
+#   "Oranges": 2
+# }
 quantity = {
-  "Baby Spinach": 1,
-  "Hot Chocolate": 3,
-  "Crackers": 2,
-  "Bacon": 1,
-  "Carrots": 4,
-  "Oranges": 2
+  "Baby Spinach": 2,
+  "Hot Chocolate": 1,
+  "Crackers": 4,
+  "Bacon": 0,
+  "Carrots": 8,
+  "Oranges": 5
 }
 
-for item, price in groceries.items():
-    total = quantity[item] * price
-    print(f"{quantity[item]} {item} @ ${price} = ${total:.2f}")
+# for item, price in groceries.items():
+#     total = quantity[item] * price
+#     print(f"{quantity[item]} {item} @ ${price} = ${total:.2f}")
+
+# alternative:
+# for item in groceries:
+#     total = quantity[item] * groceries[item]
+#     print(f"{quantity[item]} {item} @ ${groceries[item]} = ${total:.2f}")
