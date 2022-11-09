@@ -74,3 +74,11 @@ with open("csv_files/galaxies.csv", encoding="utf8") as galaxies_file:
 
 print(f"Galaxy {min_galaxy} has the min velocity of {min_velocity}km/sec.")
 print(f"Galaxy {max_galaxy} has the min velocity of {max_velocity}km/sec.")
+
+
+# writing to csv file
+# population = []
+# with open("population.csv", mode="w", encoding="utf-8") as csv_file:
+#     csv_writer = csv.writer(csv_file, delimiter=",")
+#     for age_group in population:
+#         csv_writer.writerow([age_group[1], age_group[0]])
