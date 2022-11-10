@@ -32,9 +32,9 @@ quantity = {
   "Oranges": 5
 }
 
-# for item, price in groceries.items():
-#     total = quantity[item] * price
-#     print(f"{quantity[item]} {item} @ ${price} = ${total:.2f}")
+for item, price in groceries.items():
+    total = quantity[item] * price
+    print(f"{quantity[item]} {item} @ ${price} = ${total:.2f}")
 
 # alternative:
 # for item in groceries:
@@ -89,11 +89,11 @@ colours = [
     "yellow"
 ]
 
-# for item, counter in colour_counts.items():
-#     for colour in colours:
-#         if colour == item:
-#             counter = counter + 1
-#     print(f"{item}: {counter}")
+for item, counter in colour_counts.items():
+    for colour in colours:
+        if colour == item:
+            counter = counter + 1
+    print(f"{item}: {counter}")
 
 # Q3. Given the list of names below, create a dictionary where each key is a name and the value
 # is the number of times that name occurs in the list.
@@ -113,16 +113,16 @@ names = [
 "Maddie", "Miranda", "Rosie"
 ]
 
-# names_count = {}
+names_count = {}
 
-# for name in names:
-#     if names_count.get(name) is None:
-#         names_count[name] = 1
-#     else:
-#         names_count[name] += 1
+for name in names:
+    if names_count.get(name) is None:
+        names_count[name] = 1
+    else:
+        names_count[name] += 1
 
-# for name, count in names_count.items():
-#     print(name, count)
+for name, count in names_count.items():
+    print(name, count)
 
 # Q4. Read the colour data from colours_20_simple.csv and save the data in a dictionary where
 # the key is the hex code and value is the corresponding English name.
@@ -133,6 +133,19 @@ with open("csv_files/colours_20_simple.csv", encoding="utf8") as colours_file:
     next(reader)
     for line in reader:
         colour_hex.update({line[1]: line[2]})
+
+for hexcode, colour in colour_hex.items():
+    print(f"{hexcode}: {colour}")
+
+# Q5.Modify your code from the previous exercise to save both the English name and RGB code
+# in a list as the value for the corresponding hex code.
+colour_hex = {}
+
+with open("csv_files/colours_20_simple.csv", encoding="utf8") as colours_file:
+    reader = csv.reader(colours_file)
+    next(reader)
+    for line in reader:
+        colour_hex.update({line[1]: [line[0], line[2]]})
 
 for hexcode, colour in colour_hex.items():
     print(f"{hexcode}: {colour}")
