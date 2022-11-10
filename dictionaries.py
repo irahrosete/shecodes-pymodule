@@ -39,3 +39,57 @@ quantity = {
 # for item in groceries:
 #     total = quantity[item] * groceries[item]
 #     print(f"{quantity[item]} {item} @ ${groceries[item]} = ${total:.2f}")
+
+# Q2. The dictionary below contains several colour names and a counter (defaulted to 0).
+# Your task is to iterate over a list of colours and keep track of the number of times
+# each colour has occurred by updating the corresponding counter in this dictionary.
+colour_counts = {
+    "blue": 0,
+    "green": 0,
+    "yellow": 0,
+    "red": 0,
+    "purple": 0,
+    "orange": 0,
+  }
+
+# colours = [
+#     "purple",
+#     "red",
+#     "yellow",
+#     "blue",
+#     "purple",
+#     "orange",
+#     "blue",
+#     "purple",
+#     "orange",
+#     "green"
+# ]
+
+colours = [
+    "orange",
+    "purple",
+    "blue",
+    "yellow",
+    "green",
+    "green",
+    "purple",
+    "purple",
+    "green",
+    "blue",
+    "green",
+    "orange",
+    "purple",
+    "blue",
+    "green",
+    "orange",
+    "orange",
+    "red",
+    "yellow",
+    "yellow"
+]
+
+for item, counter in colour_counts.items():
+    for colour in colours:
+        if colour == item:
+            counter = counter + 1
+    print(f"{item}: {counter}")
