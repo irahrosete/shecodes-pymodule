@@ -1,5 +1,6 @@
 """Python module dictionaries exercises"""
 # pylint: disable=invalid-name
+import csv
 
 # Q1. The dictionary below represents the cost of individual items in a supermarket.
 # A separate dictionary is given in the table below, this dictionary represents the
@@ -112,13 +113,26 @@ names = [
 "Maddie", "Miranda", "Rosie"
 ]
 
-names_count = {}
+# names_count = {}
 
-for name in names:
-    if names_count.get(name) is None:
-        names_count[name] = 1
-    else:
-        names_count[name] += 1
+# for name in names:
+#     if names_count.get(name) is None:
+#         names_count[name] = 1
+#     else:
+#         names_count[name] += 1
 
-for name, count in names_count.items():
-    print(name, count)
+# for name, count in names_count.items():
+#     print(name, count)
+
+# Q4. Read the colour data from colours_20_simple.csv and save the data in a dictionary where
+# the key is the hex code and value is the corresponding English name.
+colour_hex = {}
+
+with open("csv_files/colours_20_simple.csv", encoding="utf8") as colours_file:
+    reader = csv.reader(colours_file)
+    next(reader)
+    for line in reader:
+        colour_hex.update({line[1]: line[2]})
+
+for hexcode, colour in colour_hex.items():
+    print(f"{hexcode}: {colour}")
