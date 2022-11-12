@@ -121,7 +121,37 @@ class Student2:
           f"{''.join(f'  {key} in {value}{new_line}' for key, value in self.program_year.items())}"
         )
 
-student = Student("Irah", "Javascipt", 2018)
-print(student)
-student2 = Student2("Irah", {"Python": 2022, "Django": 2021, "Java": 2019})
-print(student2)
+# student = Student("Irah", "Javascipt", 2018)
+# print(student)
+# student2 = Student2("Irah", {"Python": 2022, "Django": 2021, "Java": 2019})
+# print(student2)
+
+# Q4.Create a class to represent Vehicle objects. Attributes that you may want to include:
+# ● Make and model
+# ● Colour
+# ● Seating capacity
+# ● Maximum speed
+# Include a __str__ method to print a summary of the Vehicle.
+# Include rev_engine method to print the noise the vehicle makes (print(“VRRRMMMM!”) is a good
+# approximation :P)
+class Vehicle:
+    def __init__(self, make_model, colour, seat, max_speed) -> None:
+        self.make_model = make_model
+        self.colour = colour
+        self.seat = seat
+        self.max_speed = max_speed
+
+    def rev_engine(self):
+        return "“VRRRMMMM!”"
+
+    def __str__(self) -> str:
+        return (
+            "Vehicle summary:\n"
+            f"  {self.make_model}\n"
+            f"  {self.seat} seat capacity\n"
+            f"  {self.max_speed} maximum speed"
+        )
+
+vehicle = Vehicle("Toyota RAV4", "silver", "4", "190kmh")
+print(vehicle)
+print(vehicle.rev_engine())
