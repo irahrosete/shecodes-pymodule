@@ -155,3 +155,16 @@ class Vehicle:
 vehicle = Vehicle("Toyota RAV4", "silver", "4", "190kmh")
 print(vehicle)
 print(vehicle.rev_engine())
+
+# bonus challenge!
+# Adapt your Vehicle class to keep track of the amount of fuel available.
+# There are no parameters here, get creative and see if you can think of a
+# suitable way to approach this problem. Things to consider:
+# ● It’s totally fine to make an assumption about consistent fuel consumption per km.
+# ● The vehicle can also be refuelled (and the fuel tank obviously has a maximum capacity).
+# ● Perhaps the user should be warned if they are nearing an empty fuel tank.
+
+# fill tank
+# drive vehicle
+    # warn_low_fuel
+# check_fuel
