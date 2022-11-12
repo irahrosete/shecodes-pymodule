@@ -10,7 +10,7 @@ import math
 # 3. Automatically go back to the start of the book (i.e. page 1) when the user
 # turns the final page.
 class Book:
-    def __init__(self, title, author, pages, current_page):
+    def __init__(self, title, author, pages, current_page) -> None:
         self.title = title
         self.author = author
         self.pages = pages
@@ -35,7 +35,7 @@ class Book:
     def go_to_page(self, num):
         self.current_page = int(num)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return (
             f"Title: {self.title}, Author: {self.author}, Pages: {self.pages}, "
             f"Current page: {self.current_page}"
@@ -68,22 +68,60 @@ class Rectangle:
 
     # 2
     def perimeter(self):
-      return 2 * (self.width + self.height)
+        return 2 * (self.width + self.height)
 
     # 3
     def diagonal_length(self):
-      return round(math.sqrt(self.width**2 + self.height**2), 2)
+        return round(math.sqrt(self.width**2 + self.height**2), 2)
 
     # 4
     def isSquare(self):
-      return self.width == self.height
+        return self.width == self.height
 
     def __str__(self) -> str:
         return f"This rectangle is {self.width} units wide and {self.height} units long."
 
-rect = Rectangle("2", 4)
-print(rect)
-print(rect.area())
-print(rect.perimeter())
-print(rect.diagonal_length())
-print(rect.isSquare())
+# rect = Rectangle("2", 4)
+# print(rect)
+# print(rect.area())
+# print(rect.perimeter())
+# print(rect.diagonal_length())
+# print(rect.isSquare())
+
+# Q3. Part A Create a class to represent She Codes Students.
+# Attributes that you may want to include:
+# ● Name
+# ● Program attended
+# ● Year they attended
+# Include a __str__ method to print a summary of the Student’s details.
+# Part B What if a student has attended multiple programs?
+# How would you adapt your class to handle this?
+# A
+class Student:
+    def __init__(self, name, program, year) -> None:
+        self.name = name
+        self.program = program
+        self.year = year
+
+    def __str__(self) -> str:
+        return (
+            f"{self.name} attended {self.program} in {self.year}"
+        )
+
+# B
+class Student2:
+    def __init__(self, name, program_year) -> None:
+        self.name = name
+        self.program_year = program_year
+
+    def __str__(self) -> str:
+        new_line = "\n"
+        return (
+          f"{self.name} attended:\n"
+          f"{''.join(f'  {key} in {value}{new_line}' for key, value in self.program_year.items())}"
+        )
+
+student = Student("Irah", "Javascipt", 2018)
+print(student)
+student2 = Student2("Irah", {"Python": 2022, "Django": 2021, "Java": 2019})
+print(student2)
