@@ -1,6 +1,6 @@
-## She Codes Python Module
+## She Codes AU
 
-### Exercises
+### Python Module Exercises
 
 1. [variables](/variables_input.py)
 1. [user input](/variables_input.py)
@@ -16,4 +16,4 @@
 
 ---
 
-- [databases](/databases.py)
+12. [databases](/databases.py)
