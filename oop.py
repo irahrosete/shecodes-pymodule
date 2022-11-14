@@ -179,7 +179,10 @@ class Vehicle2:
     def fill_tank(self, fuel_amount):
         # add condition for fuel limit
         total_fuel = self.fuel_remaining + fuel_amount
-        return f"You filled up with {fuel_amount}L from {self.fuel_remaining}L and now have {total_fuel}L fuel available."
+        return (
+            f"You filled up with {fuel_amount}L from {self.fuel_remaining}L "
+            f"and now have {total_fuel}L fuel available."
+        )
 
     def drive(self, km):
         # add condition if not enough fuel
