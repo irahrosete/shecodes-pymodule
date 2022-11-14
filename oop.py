@@ -152,9 +152,9 @@ class Vehicle:
             f"  {self.max_speed} maximum speed"
         )
 
-vehicle = Vehicle("Toyota RAV4", "silver", "4", "190kmh")
-print(vehicle)
-print(vehicle.rev_engine())
+# vehicle = Vehicle("Toyota RAV4", "silver", "4", "190kmh")
+# print(vehicle)
+# print(vehicle.rev_engine())
 
 # bonus challenge!
 # Adapt your Vehicle class to keep track of the amount of fuel available.
@@ -164,7 +164,38 @@ print(vehicle.rev_engine())
 # ● The vehicle can also be refuelled (and the fuel tank obviously has a maximum capacity).
 # ● Perhaps the user should be warned if they are nearing an empty fuel tank.
 
-# fill tank
-# drive vehicle
-    # warn_low_fuel
-# check_fuel
+class Vehicle2:
+    def __init__(self, make_model, fuel_remaining, fuel_limit) -> None:
+        self.make_model = make_model
+        self.fuel_remaining = fuel_remaining
+        self.fuel_limit = fuel_limit
+
+    def rev_engine(self):
+        return "“VRRRMMMM!”"
+
+    def fuel_available(self):
+        return f"{self.fuel_remaining}L fuel available"
+
+    def fill_tank(self, fuel_amount):
+        # add condition for fuel limit
+        total_fuel = self.fuel_remaining + fuel_amount
+        return f"You filled up with {fuel_amount}L from {self.fuel_remaining}L and now have {total_fuel}L fuel available."
+
+    def drive(self, km):
+        # add condition if not enough fuel
+        self.fuel_remaining -= (km * 0.108)
+        return f"You drove {km}kms and now have {self.fuel_remaining}L fuel available."
+
+    def __str__(self) -> str:
+        return (
+            "Vehicle summary:\n"
+            f"  {self.make_model}\n"
+            f"  {self.fuel_remaining}L fuel available\n"
+            f"  {self.fuel_limit}L fuel limit"
+        )
+
+vehicle = Vehicle2("Toyota RAV4", 20, 55)
+print(vehicle)
+print(vehicle.rev_engine())
+print(vehicle.drive(3))
+print(vehicle.fill_tank(10))
